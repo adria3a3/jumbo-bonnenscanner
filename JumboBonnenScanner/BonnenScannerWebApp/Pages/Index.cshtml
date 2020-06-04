@@ -1,0 +1,23 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<script type="text/javascript" xmlns="http://www.w3.org/1999/html">
+const data = @Html.Raw(@Model.Output);
+</script>
+
+
+<div class="text-center" id="form">
+    <form method="post" enctype="multipart/form-data">
+        <input type="file" asp-for="Upload"/>
+        <input type="submit" value="Upload"/>
+    </form>
+    <div id="message" style="display: none">Nieuwe regels toegevoegd: <span id="number-of-lines"></span></div>
+    <script type="text/javascript" src="js/bonnenscanner.js"></script>
+    <script async defer src="https://apis.google.com/js/api.js"
+            onload="this.onload=function(){};handleClientLoad()"
+            onreadystatechange="if (this.readyState === 'complete') this.onload()">
+</script>
+</div>
