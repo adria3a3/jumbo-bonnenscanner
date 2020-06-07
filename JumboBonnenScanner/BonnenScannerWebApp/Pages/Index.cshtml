@@ -5,6 +5,8 @@
 }
 
 <script type="text/javascript" xmlns="http://www.w3.org/1999/html">
+const API_KEY = '@Environment.GetEnvironmentVariable("BONNENSCANNER_API_KEY")';
+const CLIENT_ID = '@Environment.GetEnvironmentVariable("BONNENSCANNER_CLIENT_ID")';
 const data = @Html.Raw(@Model.Output);
 </script>
 

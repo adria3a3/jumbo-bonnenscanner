@@ -1,8 +1,4 @@
-﻿// Client ID and API key from the Developer Console
-const CLIENT_ID = '<client-id>';
-const API_KEY = '<api-key>';
-
-// Array of API discovery doc URLs for APIs used by the quickstart
+﻿// Array of API discovery doc URLs for APIs used by the quickstart
 const DISCOVERY_DOCS = ['https://sheets.googleapis.com/$discovery/rest?version=v4'];
 
 
