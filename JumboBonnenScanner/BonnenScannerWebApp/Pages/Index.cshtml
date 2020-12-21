@@ -17,9 +17,20 @@ const data = @Html.Raw(@Model.Output);
         <input type="submit" value="Upload"/>
     </form>
     <div id="message" style="display: none">Nieuwe regels toegevoegd: <span id="number-of-lines"></span></div>
-    <script type="text/javascript" src="js/bonnenscanner.js"></script>
-    <script async defer src="https://apis.google.com/js/api.js"
-            onload="this.onload=function(){};handleClientLoad()"
-            onreadystatechange="if (this.readyState === 'complete') this.onload()">
-</script>
 </div>
+
+
+
+<div class="flex-center full-height">
+    <div class="content">
+        <a href="#" id="start">Click to Sign In</a>
+        <div id="token" class="hidden">
+            <h2>Access Token</h2>
+            <div id="access_token" class="code"></div>
+        </div>
+        <div id="error" class="hidden">
+            <h2>Error</h2>
+            <div id="error_details" class="code"></div>
+        </div>
+    </div>
+</div>  
