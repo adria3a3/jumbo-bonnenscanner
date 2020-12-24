@@ -34,6 +34,10 @@ namespace BonnenScannerWebApp.Pages
 
         public async Task OnPostAsync()
         {
+            if (Upload == null)
+            {
+                return;
+            }
             var image = await Image.FromStreamAsync(Upload.OpenReadStream());
             var client = await ImageAnnotatorClient.CreateAsync();
 
@@ -81,7 +85,7 @@ namespace BonnenScannerWebApp.Pages
                 var regex = Regex.Match(row, @"(?<price>-?\d{1,3},\d{2})?\s?(?<bonus>P?B)?$");
                 var length = regex.Groups["price"].Index;
                 length = length == 0 ? row.Length : length;
-                
+
                 var currentRow = new List<string>
                 {
                     row.Substring(0, length),
